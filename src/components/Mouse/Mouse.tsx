@@ -96,8 +96,8 @@ const Mouse = () => {
   useEffect(() => {
     const onPointerMove = () => {
       if (
-        !shouldShowMouse ||
-        window.matchMedia("only screen and (max-width: 760px)").matches
+        !shouldShowMouse &&
+        !window.matchMedia("only screen and (max-width: 760px)").matches
       ) {
         setShowMouse(true);
       }
