@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-500 bg-fixed bg-no-repeat font-roboto text-white;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  *,
+  a,
+  button {
+    @apply cursor-none;
+  }
+
+  :focus {
+    @apply outline-dashed outline-2 outline-black;
+  }
+}
+
+@layer components {
+  .inner-mouse {
+    @apply pointer-events-none fixed z-[100] h-6 w-6 select-none rounded-full bg-slate-700 transition-[scale] duration-200 ease-in-out;
+  }
+
+  .outer-mouse {
+    @apply pointer-events-none fixed z-[100] h-12 w-12 select-none rounded-full border-4 border-slate-700;
+  }
+}
