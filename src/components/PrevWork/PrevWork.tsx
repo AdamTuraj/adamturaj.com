@@ -110,7 +110,7 @@ const PrevWork = ({ projects }: { projects: ProjectType[] }) => {
       <h2 className="text-center text-5xl font-bold md:text-6xl">
         Somethings I have built
       </h2>
-      <div className="mt-10 flex flex-col gap-5 md:gap-24">
+      <div className="mt-20 flex flex-col gap-5 md:gap-24">
         {projects ? (
           projects.map((project, i) => (
             <Project

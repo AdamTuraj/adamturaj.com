@@ -6,14 +6,14 @@ const Contact = () => {
   return (
     <section className="mt-52 mb-24 flex w-screen flex-col gap-5" id="contact">
       <h2 className="text-center text-6xl font-bold">Contact Me</h2>
-      <p className="text-center text-lg font-thin md:mx-auto md:w-1/2 md:text-xl">
+      <p className="text-center text-lg font-thin md:mx-auto md:w-3/4 md:text-xl">
         My inbox is always open to new opportunities, questions or just saying
         hi. I provide flexible prices and am mostly always available for a new
         project. I hope to hear from you soon, this is the first step to a new
         opportunity!
       </p>
       <form
-        className="flex flex-col gap-5 px-5 md:mx-auto md:w-1/2"
+        className="flex flex-col gap-5 px-5 md:mx-auto md:w-3/4"
         onSubmit={handleSubmit(
           ({ subject, body }) =>
             ((

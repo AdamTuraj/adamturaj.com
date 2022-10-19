@@ -4,8 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-r from-cyan-500 to-blue-500 bg-fixed bg-no-repeat font-roboto text-white;
-    -webkit-overflow-scrolling: touch;
+    @apply overflow-x-hidden bg-gradient-to-r from-cyan-500 to-blue-500 bg-fixed bg-no-repeat font-roboto text-white;
   }
 
   *,
