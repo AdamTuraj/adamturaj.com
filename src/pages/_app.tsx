@@ -17,23 +17,23 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           },
           {
             rel: "apple-touch-icon",
-            href: "/apple-touch-icon.png",
+            href: "/seomedia/apple-touch-icon.png",
           },
           {
             rel: "icon",
             type: "image/png",
             sizes: "32x32",
-            href: "/favicon-32x32.png",
+            href: "/seomedia/favicon-32x32.png",
           },
           {
             rel: "icon",
             type: "image/png",
             sizes: "16x16",
-            href: "/favicon-16x16.png",
+            href: "/seomedia/favicon-16x16.png",
           },
           {
             rel: "manifest",
-            href: "/site.webmanifest",
+            href: "/seomedia/site.webmanifest",
           },
         ]}
         additionalMetaTags={[
