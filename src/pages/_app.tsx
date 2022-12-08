@@ -45,6 +45,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             name: "theme-color",
             content: "#00ed3b",
           },
+          {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1",
+          },
         ]}
         openGraph={{
           type: "website",
