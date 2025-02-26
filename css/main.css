@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+
+  font-family: "Delius", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-image: url("../assets/images/bg.png");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding-top: 10rem;
+  width: 30%;
+  max-width: 1200px;
+}
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.profile-img {
+  width: 125px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.github-link,
+.discord-link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #7b7b7b;
+}
+
+.discord-link:hover {
+  color: #5865f2;
+}
+
+.profile-description {
+  font-size: 1rem;
+  color: #333;
+
+  margin-bottom: 0;
+
+  border-top: 1px solid black;
+  padding-top: 1rem;
+}
+
+.profile-description a {
+  color: #08bb08;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.profile-description a:hover {
+  color: #0a8a0a;
+}
