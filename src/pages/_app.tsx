@@ -9,7 +9,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <NextSeo
         title="Adam Turaj"
-        description="Adam Turaj is a Canada based software engineer who specializes in developing (and sometimes designing) spectacular services!"
+        description="Adam Turaj is a Mechatronics Engineer studying at the university of Waterloo!"
+        canonical="https://www.adamturaj.com/"
         additionalLinkTags={[
           {
             rel: "icon",
@@ -49,6 +50,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             name: "viewport",
             content: "width=device-width, initial-scale=1",
           },
+          {
+            name: "robots",
+            content: "index,follow",
+          },
         ]}
         openGraph={{
           type: "website",
@@ -56,8 +61,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           url: "https://www.adamturaj.com/",
           site_name: "Adam Turaj",
           description:
-            "This is the portfolio of Adam Turaj, a Canadian based software engineer.",
-          images: [{ url: "/adamturaj.png", alt: "Image of Adam Turaj" }],
+            "Portfolio of Adam Turaj, a University of Waterloo Mechatronics Engineering student",
+          images: [{ url: "/adamturaj.jpg", alt: "Image of Adam Turaj" }],
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "@adamturaj",
         }}
       />
       <Mouse />

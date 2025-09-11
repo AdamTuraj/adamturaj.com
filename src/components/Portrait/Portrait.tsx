@@ -7,7 +7,7 @@ const Portrait = () => {
       <Image
         src={AdamTuraj}
         priority={true}
-        alt="A hand drawn version of me."
+        alt="My Linkedin profile picture"
         className="rounded-full w-96 h-96 object-cover"
       />
     </div>
