@@ -2,13 +2,6 @@ import Title from "../Title";
 import Portrait from "../Portrait";
 
 const Header = () => {
-  const scrollTo = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       <header className="flex h-screen w-screen flex-row" id="header">
