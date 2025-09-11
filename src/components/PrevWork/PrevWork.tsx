@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
@@ -16,7 +16,7 @@ const ProjectTextbox = ({
   return (
     <div className="relative min-w-[25%]">
       <div
-        className={`top-1/2 z-10 flex flex-col rounded-md bg-white px-10 py-5 text-black md:absolute md:-translate-y-1/2 md:rounded-lg ${
+        className={`top-1/2 z-10 flex flex-col rounded-md bg-white border px-10 py-5 text-black md:absolute md:-translate-y-1/2 md:rounded-lg ${
           reversed ? "-right-14" : "-left-14"
         }`}
       >
@@ -29,7 +29,7 @@ const ProjectTextbox = ({
           dangerouslySetInnerHTML={{ __html: project.description }}
         />
         <br />
-        <p className="font-thin">Built using {langString}</p>
+        <p className="font-thin">Skills demostrated: {langString}</p>
         <div className="mt-2 flex w-full justify-end gap-2">
           {project.githubUrl && (
             <a

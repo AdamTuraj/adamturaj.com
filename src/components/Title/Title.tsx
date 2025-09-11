@@ -6,8 +6,8 @@ const Title = () => {
   const sentences = [
     "Hello,",
     "My name is Adam,",
-    "I am a Front-End",
-    "Developer",
+    "I am a Mechatronics",
+    "Engineer"
   ];
 
   return (

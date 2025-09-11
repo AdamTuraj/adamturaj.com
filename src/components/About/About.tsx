@@ -1,26 +1,86 @@
-import Chart from "./Chart";
+import Image from "next/image";
+
 import BottomWave from "./Waves/BottomWave";
 import TopWave from "./Waves/TopWave";
+
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+
+import AboutPicture from "./AboutPicture.jpg";
 
 const About = () => {
   return (
     <section id="about">
       <TopWave />
-      <div className="flex h-screen w-screen flex-row bg-gradient-to-r from-green-600 to-green-800 md:h-[50vh] md:pl-36 md:pr-12 xl:items-center">
-        <div className="flex-[50%] text-center md:text-left">
-          <h2 className="block pt-14 text-6xl font-bold">About Me</h2>
-          <p className="mt-5 max-h-[80%] overflow-y-auto break-words text-xl font-thin lg:text-lg xl:text-2xl">
-            Hello! My name is Adam Turaj. I am a Canadian-based front-end
-            freelancer. Between my high school studies and personal life, I
-            spend lots of time programming for clients and open-source projects.
-            <br />
-            <br />I have worked with many different technologies and frameworks.
-            My main focus is React and Next.js though I am a big fan of Python.
-            I am also spending a lot of time learning new languages and
-            frameworks.
-          </p>
+      <div className="w-screen bg-gradient-to-r from-green-600 to-green-800 pt-2">
+        <div className="overflow-visible text-center md:px-20 md:text-left">
+          <h2 className="block text-6xl font-bold">About Me</h2>
+          <div className="flex gap-10">
+            <p className="mt-5 max-w-[1/2] text-xl font-thin lg:text-lg xl:text-2xl">
+              Hello! My name is Adam Turaj, and I am currently studying
+              Mechatronics Engineering at the University of Waterloo, Class of
+              2030.
+              <br />
+              <br />I have a strong passion for designing PCBs and developing
+              mechanical structures. At school, I am an active member of the
+              hardware and aerodynamics teams in{" "}
+              <a
+                href="https://www.uwmidsun.com/"
+                className="font-medium text-primary hover:text-green-500"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Midnight Sun
+              </a>
+              , the university’s solar racing team.
+              <br />
+              <br />
+              Outside of academics, I enjoy sim racing on Le Mans Ultimate and
+              Assetto Corsa Competizione, as well as attending real-world
+              motorsport events whenever I can.
+            </p>
+            <div className="flex items-center transition-transform hover:rotate-1 hover:scale-105">
+              <a
+                href="https://www.thesimgrid.com/drivers/88431-_adamt/grid_feed"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={AboutPicture}
+                  alt="Me standing in front of a GR86"
+                  className="rounded-3xl object-cover"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="mt-12 flex flex-row items-center justify-evenly">
+            <a
+              href="https://www.linkedin.com/in/adam-turaj/"
+              className="transition-colors hover:text-[#73ceff]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin size={64} />
+            </a>
+            <a
+              href="https://github.com/AdamTuraj"
+              className="transition-colors hover:text-[#979797]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub size={64} />
+            </a>
+            <a
+              href="https://discord.com/users/374147012599218176"
+              className="transition-colors hover:text-[#8f97f4]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaDiscord size={64} />
+            </a>
+          </div>
         </div>
-        <Chart />
       </div>
       <BottomWave />
     </section>

@@ -4,29 +4,21 @@ import Header from "../components/Header";
 import About from "../components/About";
 import PrevWork from "../components/PrevWork";
 
-import { WakatimeContext } from "../utils/context";
 import { firebase } from "../utils/firebase";
 
-import Wakatimedata from "../types/WakatimeData";
 import ProjectType from "../types/Project";
 import Contact from "../components/Contact";
-import SkipLink from "../components/SkipLink";
+import MobileWarning from "../components/MobileWarning";
 
-const Home = ({
-  languageData,
-  projects,
-}: {
-  languageData: Wakatimedata[];
-  projects: ProjectType[];
-}) => {
+const Home = ({ projects }: { projects: ProjectType[] }) => {
   return (
-    <WakatimeContext.Provider value={languageData}>
-      <SkipLink />
+    <>
+      <MobileWarning />
       <Header />
       <About />
       <PrevWork projects={projects} />
       <Contact />
-    </WakatimeContext.Provider>
+    </>
   );
 };
 
@@ -40,21 +32,9 @@ export const getStaticProps = async () => {
     projects.push(doc.data() as ProjectType);
   });
 
-  // Wakatime
-  if (!process.env.WAKATIME_URL) {
-    return {
-      props: {},
-    };
-  }
-
-  const data = await fetch(process.env.WAKATIME_URL);
-
-  const languages = (await data.json()).data.languages;
-
   return {
     props: {
       projects,
-      languageData: languages,
     },
     revalidate: 60 * 60,
   };

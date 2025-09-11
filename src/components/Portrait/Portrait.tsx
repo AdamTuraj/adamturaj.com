@@ -1,15 +1,14 @@
-import Image from "next/future/image";
-
-import SVGPortrait from "./adamturaj.svg";
+import Image from "next/image";
+import AdamTuraj from "./adamturaj.jpg";
 
 const Portrait = () => {
   return (
-    <div className="hidden h-full items-center md:flex">
+    <div className="hidden md:flex w-full justify-center items-center h-full">
       <Image
-        src={SVGPortrait}
+        src={AdamTuraj}
         priority={true}
         alt="A hand drawn version of me."
-        className="max-w-[90%]"
+        className="rounded-full w-96 h-96 object-cover"
       />
     </div>
   );
