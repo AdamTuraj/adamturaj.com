@@ -26,12 +26,12 @@ const About = () => {
               mechanical structures. At school, I am an active member of the
               hardware and aerodynamics teams in{" "}
               <a
-                href="https://www.uwmidsun.com/"
+                href="https://www.uwfsae.ca/"
                 className="font-medium text-primary hover:text-green-500"
                 target="_blank"
                 rel="noreferrer"
               >
-                Midnight Sun
+                Formula Electric
               </a>
               , the university’s solar racing team.
               <br />
