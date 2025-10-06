@@ -32,8 +32,8 @@ const About = () => {
                 rel="noreferrer"
               >
                 Formula Electric
-              </a>
-              , the university’s solar racing team.
+              </a>{" "}
+              racing team.
               <br />
               <br />
               Outside of academics, I enjoy sim racing on Le Mans Ultimate and
