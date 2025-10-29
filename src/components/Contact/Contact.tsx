@@ -4,7 +4,7 @@ const Contact = () => {
     const { register, handleSubmit } = useForm();
 
     return (
-        <section className="mt-52 mb-24 flex w-screen flex-col gap-5" id="contact">
+        <section className="mt-24 mb-24 flex w-screen flex-col gap-5 md:mt-52" id="contact">
             <h2 className="text-center text-6xl font-bold">Contact Me</h2>
             <p className="text-center text-lg font-thin md:mx-auto md:w-3/4 md:text-xl">
                 My inbox is always open to new opportunities, questions or just saying hi. I hope to

@@ -94,7 +94,7 @@ const PrevWork = ({ projects }: { projects: ProjectType[] }) => {
     return (
         <section className="mt-20 h-max w-screen px-5" id="projects">
             <h2 className="text-center text-5xl font-bold md:text-6xl">Somethings I have built</h2>
-            <div className="mt-20 flex flex-col gap-5 md:gap-24">
+            <div className="mt-5 flex flex-col gap-5 md:gap-24 lg:mt-20">
                 {projects ? (
                     projects.map((project, i) => (
                         <Project project={project} reversed={i % 2 === 1} key={project.title} />
