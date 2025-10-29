@@ -6,7 +6,7 @@ const Header = () => {
         <>
             <header
                 id="header"
-                className="flex h-[80vh] w-screen flex-row items-center justify-center gap-8 md:h-screen portrait:h-[50vh] portrait:pt-32"
+                className="flex h-[80vh] w-screen flex-row items-center justify-center gap-8 md:h-screen md:portrait:h-[50vh] md:portrait:pt-32"
             >
                 <div className="text-center sm:text-left">
                     <Title />
