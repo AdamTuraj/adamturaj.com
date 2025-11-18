@@ -20,22 +20,19 @@ const Home = ({ projects }: { projects: ProjectType[] }) => {
     );
 };
 
-export const getStaticProps = async () => {
-    // Projects
-    const docs = await getDocs(collection(firebase, "projects"));
+export const getServerSideProps = async () => {
+  const docs = await getDocs(collection(firebase, "projects"));
 
-    const projects: ProjectType[] = [];
+  const projects: ProjectType[] = [];
+  docs.forEach((doc) => {
+    projects.push(doc.data() as ProjectType);
+  });
 
-    docs.forEach((doc) => {
-        projects.push(doc.data() as ProjectType);
-    });
-
-    return {
-        props: {
-            projects,
-        },
-        revalidate: 60 * 60,
-    };
+  return {
+    props: {
+      projects,
+    },
+  };
 };
 
 export default Home;
