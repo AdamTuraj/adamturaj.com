@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import { getDocs, collection } from "firebase/firestore";
 
 import Header from "../components/Header";
