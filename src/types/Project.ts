@@ -6,4 +6,5 @@ export default interface Project {
     imageUrl: string;
     url: string;
     githubUrl?: string;
+    sketchfab?: string;
 }

@@ -1,11 +1,18 @@
+import { useState } from "react";
+
 import Image from "next/image";
+import Script from "next/script";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
+import { TbCube3dSphere } from "react-icons/tb";
 
 import ProjectType from "../../types/Project";
+import SketchfabModal from "./SketchfabModal";
 
 const ProjectTextbox = ({ project, reversed }: { project: ProjectType; reversed: boolean }) => {
+    const [showModel, setShowModel] = useState(false);
+
     const langString = project.languages.join(", ");
     return (
         <div className="relative min-w-[25%]">
@@ -16,19 +23,29 @@ const ProjectTextbox = ({ project, reversed }: { project: ProjectType; reversed:
             >
                 <h4 className="text-sm text-green-500">Featured Project</h4>
                 <h3 className="text-2xl font-bold whitespace-pre-wrap">{project.title}</h3>
-                <p
-                    className="font-normal"
-                    dangerouslySetInnerHTML={{ __html: project.description }}
-                />
+                <p className="font-normal">{project.description}</p>
                 <br />
                 <p className="font-thin">Skills demostrated: {langString}</p>
                 <div className="mt-2 flex w-full justify-end gap-2">
+                    {project.sketchfab && (
+                        <button
+                            onClick={() => setShowModel(true)}
+                            aria-label="View 3D model"
+                            title="View 3D Model"
+                        >
+                            <TbCube3dSphere
+                                size={28}
+                                className="hover:text-primary transition-colors duration-500"
+                            />
+                        </button>
+                    )}
                     {project.githubUrl && (
                         <a
                             href={project.githubUrl}
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Check out the projects Github"
+                            title="View on GitHub"
                         >
                             <AiFillGithub
                                 size={28}
@@ -41,6 +58,7 @@ const ProjectTextbox = ({ project, reversed }: { project: ProjectType; reversed:
                         target="_blank"
                         rel="noreferrer"
                         aria-label="Check out the projects website"
+                        title="Visit Website"
                     >
                         <BiLinkExternal
                             size={28}
@@ -49,6 +67,13 @@ const ProjectTextbox = ({ project, reversed }: { project: ProjectType; reversed:
                     </a>
                 </div>
             </div>
+            {showModel && project.sketchfab && (
+                <SketchfabModal
+                    uid={project.sketchfab}
+                    title={project.title}
+                    onClose={() => setShowModel(false)}
+                />
+            )}
         </div>
     );
 };
@@ -91,8 +116,16 @@ const Project = ({ project, reversed }: { project: ProjectType; reversed: boolea
     );
 };
 const PrevWork = ({ projects }: { projects: ProjectType[] }) => {
+    const hasSketchfab = projects?.some((p) => p.sketchfab);
+
     return (
         <section className="mt-20 h-max w-screen px-5" id="projects">
+            {hasSketchfab && (
+                <Script
+                    src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"
+                    strategy="lazyOnload"
+                />
+            )}
             <h2 className="text-center text-5xl font-bold md:text-6xl">Somethings I have built</h2>
             <div className="mt-5 flex flex-col gap-5 md:gap-24 lg:mt-20">
                 {projects ? (

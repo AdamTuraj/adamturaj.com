@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AdamTuraj from "./adamturaj.jpg";
+import AdamTuraj from "./adamturaj.png";
 
 const Portrait = () => {
     return (
@@ -7,7 +7,7 @@ const Portrait = () => {
             src={AdamTuraj}
             priority={true}
             alt="My Linkedin profile picture"
-            className="hidden h-96 w-96 rounded-full object-cover object-top sm:block portrait:h-72 portrait:w-72"
+            className="hidden shrink-0 rounded-full object-cover object-top lg:block lg:h-64 lg:w-64 xl:h-80 xl:w-80"
         />
     );
 };

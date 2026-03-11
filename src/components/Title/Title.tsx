@@ -6,7 +6,7 @@ const Title = () => {
     const sentences = ["Hello,", "My name is Adam,", "I am a Mechatronics", "Engineer"];
 
     return (
-        <h1 className="w-full text-center text-4xl md:w-max md:text-left lg:text-6xl xl:text-[5rem] xl:leading-none">
+        <h1 className="text-4xl leading-tight font-bold sm:text-5xl md:text-5xl lg:text-6xl">
             {sentences.map((sentence, index) => (
                 <React.Fragment key={index}>
                     {sentence.split("").map((letter, letterIndex) => (
