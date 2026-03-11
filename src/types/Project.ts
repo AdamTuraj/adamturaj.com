@@ -1,4 +1,5 @@
 export default interface Project {
+    order: number;
     title: string;
     description: string;
     languages: string[];

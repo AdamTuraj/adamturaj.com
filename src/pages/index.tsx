@@ -27,7 +27,9 @@ export const getStaticProps = async () => {
     const projects: ProjectType[] = [];
 
     docs.forEach((doc) => {
-        projects.push(doc.data() as ProjectType);
+        const data = doc.data() as ProjectType;
+
+        projects[data.order] = data;
     });
 
     return {
