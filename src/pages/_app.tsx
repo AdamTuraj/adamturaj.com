@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next";
 import Mouse from "../components/Mouse";
 import Navbar from "../components/Navbar";
 
@@ -53,6 +54,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             <Mouse />
             <Navbar />
             <Component {...pageProps} />
+            <Analytics />
         </>
     );
 };
