@@ -25,7 +25,7 @@ const ProjectTextbox = ({ project, reversed }: { project: ProjectType; reversed:
                 <h3 className="text-2xl font-bold whitespace-pre-wrap">{project.title}</h3>
                 <p className="font-normal">{project.description}</p>
                 <br />
-                <p className="font-thin">Skills demostrated: {langString}</p>
+                <p className="font-thin">Skills demonstrated: {langString}</p>
                 <div className="mt-2 flex w-full justify-end gap-2">
                     {project.sketchfab && (
                         <button
