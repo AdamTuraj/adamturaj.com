@@ -58,14 +58,14 @@ const SketchfabModal = ({
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm [&_*]:!cursor-auto"
+            className="fixed inset-0 z-50 flex cursor-auto items-center justify-center bg-black/60 backdrop-blur-sm"
             onClick={onClose}
         >
             <div
                 className="relative mx-4 w-full max-w-4xl overflow-hidden rounded-lg bg-white shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="flex items-center justify-between border-b px-5 py-3">
+                <div className="flex cursor-auto items-center justify-between border-b px-5 py-3">
                     <h3 className="text-lg font-bold text-black">{title} — 3D Model</h3>
                     <button
                         onClick={onClose}

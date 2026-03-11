@@ -13,7 +13,10 @@ const About = () => {
     return (
         <section id="about">
             <TopWave />
-            <div className="w-screen bg-gradient-to-r from-green-600 to-green-800 pt-2">
+            <div
+                className="w-screen pt-2"
+                style={{ background: "linear-gradient(to right in srgb, #16a34a, #166534)" }}
+            >
                 <div className="overflow-visible text-center md:px-20 md:text-left">
                     <h2 className="block text-6xl font-bold">About Me</h2>
                     <div className="flex gap-10">

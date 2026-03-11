@@ -19,21 +19,30 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 z-40 flex max-h-10 w-screen flex-row items-center bg-white px-6 py-2 text-2xl text-black md:max-h-16 md:px-24 md:py-7 ${
-                shouldHide ? "-translate-y-full" : ""
-            } transition-transform duration-500`}
+            className={`fixed inset-x-0 top-4 z-40 mx-4 flex items-center justify-between rounded-2xl border border-white/30 bg-white/60 px-8 py-3 text-gray-800 shadow-lg shadow-black/5 backdrop-blur-xl backdrop-saturate-150 md:mx-8 ${
+                shouldHide ? "-translate-y-[calc(100%+2rem)]" : ""
+            } transition-all duration-500`}
         >
-            <Link to="header" className="min-w-max text-2xl font-extrabold md:text-4xl">
+            <Link to="header" className="text-xl font-bold md:text-2xl">
                 Adam Turaj
             </Link>
-            <div className="hidden w-full justify-end gap-5 md:flex">
-                <Link to="about" className="hover:text-primary transition-colors">
+            <div className="hidden gap-5 md:flex">
+                <Link
+                    to="about"
+                    className="hover:text-primary text-sm font-medium transition-colors md:text-base"
+                >
                     About
                 </Link>
-                <Link to="projects" className="hover:text-primary transition-colors">
+                <Link
+                    to="projects"
+                    className="hover:text-primary text-sm font-medium transition-colors md:text-base"
+                >
                     Projects
                 </Link>
-                <Link to="contact" className="hover:text-primary transition-colors">
+                <Link
+                    to="contact"
+                    className="hover:text-primary text-sm font-medium transition-colors md:text-base"
+                >
                     Contact
                 </Link>
             </div>
