@@ -3,7 +3,7 @@ import React from "react";
 import Letter from "./Letter";
 
 const Title = () => {
-    const sentences = ["Hello,", "My name is Adam,", "I am a Mechatronics", "Engineer"];
+    const sentences = ["Hello,", "My name is Adam,", "I am a Mechatronics", "Engineering Student"];
 
     return (
         <h1 className="text-4xl leading-tight font-bold sm:text-5xl md:text-5xl lg:text-6xl">

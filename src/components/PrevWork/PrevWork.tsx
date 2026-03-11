@@ -126,7 +126,7 @@ const PrevWork = ({ projects }: { projects: ProjectType[] }) => {
                     strategy="lazyOnload"
                 />
             )}
-            <h2 className="text-center text-5xl font-bold md:text-6xl">Somethings I have built</h2>
+            <h2 className="text-center text-5xl font-bold md:text-6xl">Things I’ve Built</h2>
             <div className="mt-5 flex flex-col gap-5 md:gap-24 lg:mt-20">
                 {projects ? (
                     projects.map((project, i) => (
